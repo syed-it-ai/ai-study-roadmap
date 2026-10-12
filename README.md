@@ -38,7 +38,9 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-14-safety-security** — design against the lethal trifecta. Prompt injection defense in three layers, none sufficient alone (filtering alone is confirmed not reliable). Excessive agency scoping: the same $9,999 refund is blocked whether it came from a legitimate request or an injected one — the scope checks what the action would do, not where the instruction came from. The lethal trifecta detector: private data + untrusted content + external communication together is the only dangerous overlap. And an OWASP Top 10 audit that maps this specific app's features to the risks they actually trigger. All offline, no key needed.
 
-More stages land here as they're built — staying current, and the rest, one folder at a time.
+**stage-15-stay-current** — staying current without drowning. Source currency scoring: model pricing decays on a 60-day half-life, math formulas are effectively permanent — the same age means very different things for different kinds of claims. The reading loop tracker: Article → Docs → Build → Reread, and you can't skip the build step. Signal vs noise curation: five candidates scored, two kept — the question is never "is this good," it's "does it add what the kept ones don't." And claims vs verified: the single most repeated lesson across all 14 stages — a confident claim is unbacked until something actually runs. All offline, no key needed.
+
+That's the full track: 15 stages, foundations to staying current. The repo is complete.
 
 ## How each stage folder works
 
