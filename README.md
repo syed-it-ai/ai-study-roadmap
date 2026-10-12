@@ -20,7 +20,9 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-05-context** — context engineering: what lives permanently in the prompt, what gets retrieved per request, and what fades with the session. Lost-in-the-middle, compaction strategies (sliding window vs summarize), context tier budgets with outside-in eviction, and AGENTS.md as the permanent-instruction file every coding tool reads. Topics 1, 2 and 4 call Groq's free tier; topic 3 runs offline.
 
-More stages land here as they're built — RAG, agents, evals, fine-tuning, deployment, and the rest, one folder at a time.
+**stage-06-rag** — production RAG, where the failures are usually in context assembly, not retrieval. Hybrid search (BM25 + dense fused with RRF), reranking the actually-relevant answer to the top, chunking strategies that don't split facts mid-sentence, and retrieve-first vs naive stuffing. Topics 1 and 3 run offline; topics 2 and 4 call Groq's free tier.
+
+More stages land here as they're built — agents, evals, fine-tuning, deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
 
