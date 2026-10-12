@@ -32,7 +32,9 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-11-multimodal** — voice is latency and turn-taking engineering. Turn-taking as a state machine (barge-in skips LISTENING entirely), where the milliseconds actually go (cascaded 830ms vs speech-to-speech 380ms — the LLM's own time-to-first-token is the bottleneck either way), cascaded vs speech-to-speech decided by debugging and voice-cloning needs before raw latency, and document extraction where the schema passes both invoices but only the semantic check catches the real problems. All offline, no key needed.
 
-More stages land here as they're built — deployment, and the rest, one folder at a time.
+**stage-12-deployment** — serving and the self-host math. Continuous batching vs static (78% vs 40% GPU utilization on the same 16 requests), a provider gateway where the application code never changes across primary/fallback/total-failure, quantization memory math (FP8 as the 2026 default, INT4 when memory is the binding constraint), and the break-even line that depends entirely on which API you're actually comparing against — 6M tokens/day is right at the edge for frontier pricing and 80x short against cheap APIs. All offline, no key needed.
+
+More stages land here as they're built — security, evals at scale, and the rest, one folder at a time.
 
 ## How each stage folder works
 
