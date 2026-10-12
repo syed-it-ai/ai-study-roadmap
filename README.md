@@ -36,7 +36,9 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-13-coding-agents** — coding agents, safety first. One SKILL.md read identically by 30+ tools (project priority beats user priority on conflict), a human approval gate where no code path reaches a real file without passing through it (approve/reject with no pending change raises, never silently no-ops), sandboxing as two independent gates — command and path, each blocking different attacks — and choosing a tool by confirmed differentiators, not brand preference. All offline, no key needed.
 
-More stages land here as they're built — security, evals at scale, and the rest, one folder at a time.
+**stage-14-safety-security** — design against the lethal trifecta. Prompt injection defense in three layers, none sufficient alone (filtering alone is confirmed not reliable). Excessive agency scoping: the same $9,999 refund is blocked whether it came from a legitimate request or an injected one — the scope checks what the action would do, not where the instruction came from. The lethal trifecta detector: private data + untrusted content + external communication together is the only dangerous overlap. And an OWASP Top 10 audit that maps this specific app's features to the risks they actually trigger. All offline, no key needed.
+
+More stages land here as they're built — staying current, and the rest, one folder at a time.
 
 ## How each stage folder works
 
