@@ -18,6 +18,8 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-04-reasoning** — when a reasoning model earns its extra latency and tokens. Reasoning effort levels on the gpt-oss models, self-consistency voting across samples, best-of-N with a verifier, and PRM vs ORM (why grading the steps beats grading only the final answer). Topics 1–3 call Groq's free tier; topic 4 runs offline.
 
+**stage-05-context** — context engineering: what lives permanently in the prompt, what gets retrieved per request, and what fades with the session. Lost-in-the-middle, compaction strategies (sliding window vs summarize), context tier budgets with outside-in eviction, and AGENTS.md as the permanent-instruction file every coding tool reads. Topics 1, 2 and 4 call Groq's free tier; topic 3 runs offline.
+
 More stages land here as they're built — RAG, agents, evals, fine-tuning, deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
