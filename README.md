@@ -16,6 +16,8 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-03-apis** — getting structured data out of a model reliably. Contract prompts, strict-mode structured output (constrained decoding, not just "please return JSON"), schema vs semantic validation, and a small ticket classifier that stacks all three. Topics 1, 2 and 4 call Groq's free tier; topic 3 runs offline.
 
+**stage-04-reasoning** — when a reasoning model earns its extra latency and tokens. Reasoning effort levels on the gpt-oss models, self-consistency voting across samples, best-of-N with a verifier, and PRM vs ORM (why grading the steps beats grading only the final answer). Topics 1–3 call Groq's free tier; topic 4 runs offline.
+
 More stages land here as they're built — RAG, agents, evals, fine-tuning, deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
