@@ -24,7 +24,9 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-07-tools-mcp** — tools and MCP. The tool schema is the safety boundary: a vague schema lets the model guess an account and call anyway, a scoped one forces it to ask first. The current MCP revision (stateless protocol, self-contained messages), why Sampling/Roots/Logging were deprecated (SEP-2577 killed the back-channel), and permission scoping — same registry, three gates, three different reaches. Topics 2–4 run offline; topic 1 calls Groq's free tier.
 
-More stages land here as they're built — agents, evals, fine-tuning, deployment, and the rest, one folder at a time.
+**stage-08-agents** — agents and workflows. Workflows by default: who decides control flow, the programmer or the model at runtime. The ReAct loop (with a step budget, because a stuck loop never stops on its own), the Orchestrator-Workers pattern, and why side effects demand idempotency — 3 retries, 1 real charge instead of 3. Topic 3 runs offline; topics 1, 2 and 4 call Groq's free tier.
+
+More stages land here as they're built — evals, fine-tuning, deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
 
