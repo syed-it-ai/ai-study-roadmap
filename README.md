@@ -30,6 +30,8 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-10-fine-tuning** — fine-tuning, only after the eval baseline from stage 9. Which method for which signal (verifiable reward → GRPO, preference pairs → DPO, labeled examples → SFT, none → RLHF), the LoRA/DoRA math (131K trainable instead of 16.7M), GRPO's group-relative scoring with no value model, and knowledge distillation — why the teacher's soft labels carry signal hard labels throw away. All offline, no key needed.
 
+**stage-11-multimodal** — voice is latency and turn-taking engineering. Turn-taking as a state machine (barge-in skips LISTENING entirely), where the milliseconds actually go (cascaded 830ms vs speech-to-speech 380ms — the LLM's own time-to-first-token is the bottleneck either way), cascaded vs speech-to-speech decided by debugging and voice-cloning needs before raw latency, and document extraction where the schema passes both invoices but only the semantic check catches the real problems. All offline, no key needed.
+
 More stages land here as they're built — deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
