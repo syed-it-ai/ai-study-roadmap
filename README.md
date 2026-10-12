@@ -14,6 +14,8 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-02-math** — the math that actually shows up in papers and docs: the attention formula with real numbers, RoPE positional encoding, gradient descent on one weight, and DPO loss. All offline, no key needed.
 
+**stage-03-apis** — getting structured data out of a model reliably. Contract prompts, strict-mode structured output (constrained decoding, not just "please return JSON"), schema vs semantic validation, and a small ticket classifier that stacks all three. Topics 1, 2 and 4 call Groq's free tier; topic 3 runs offline.
+
 More stages land here as they're built — RAG, agents, evals, fine-tuning, deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
