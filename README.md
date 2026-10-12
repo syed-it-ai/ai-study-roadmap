@@ -34,6 +34,8 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-12-deployment** — serving and the self-host math. Continuous batching vs static (78% vs 40% GPU utilization on the same 16 requests), a provider gateway where the application code never changes across primary/fallback/total-failure, quantization memory math (FP8 as the 2026 default, INT4 when memory is the binding constraint), and the break-even line that depends entirely on which API you're actually comparing against — 6M tokens/day is right at the edge for frontier pricing and 80x short against cheap APIs. All offline, no key needed.
 
+**stage-13-coding-agents** — coding agents, safety first. One SKILL.md read identically by 30+ tools (project priority beats user priority on conflict), a human approval gate where no code path reaches a real file without passing through it (approve/reject with no pending change raises, never silently no-ops), sandboxing as two independent gates — command and path, each blocking different attacks — and choosing a tool by confirmed differentiators, not brand preference. All offline, no key needed.
+
 More stages land here as they're built — security, evals at scale, and the rest, one folder at a time.
 
 ## How each stage folder works
