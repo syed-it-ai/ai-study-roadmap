@@ -26,7 +26,9 @@ Zero spend. Every API call in this repo goes to a free tier — Groq first (no c
 
 **stage-08-agents** — agents and workflows. Workflows by default: who decides control flow, the programmer or the model at runtime. The ReAct loop (with a step budget, because a stuck loop never stops on its own), the Orchestrator-Workers pattern, and why side effects demand idempotency — 3 retries, 1 real charge instead of 3. Topic 3 runs offline; topics 1, 2 and 4 call Groq's free tier.
 
-More stages land here as they're built — evals, fine-tuning, deployment, and the rest, one folder at a time.
+**stage-09-evals-harness** — evals that actually gate merges. A golden dataset grown from real incidents (not invented on day one), calibrating an LLM-as-judge against its documented false-negative rate, a CI gate that blocks the merge on exit code 1, and checkpoint recovery so a crashed run resumes instead of starting over. Topics 1, 3 and 4 run offline; topic 2 calls Groq's free tier.
+
+More stages land here as they're built — fine-tuning, deployment, and the rest, one folder at a time.
 
 ## How each stage folder works
 
